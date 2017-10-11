@@ -2,7 +2,7 @@
     "name": "kellerman/user-profile",
     "type": "october-plugin",
     "description": "User profile plugin for October CMS",
-    "homepage": ",
+    "homepage": "",
     "keywords": ["october", "octobercms", "user", "profile"],
     "license": "MIT",
     "require": {
