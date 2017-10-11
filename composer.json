@@ -1,0 +1,13 @@
+{
+    "name": "kellerman/user-profile",
+    "type": "october-plugin",
+    "description": "User profile plugin for October CMS",
+    "homepage": ",
+    "keywords": ["october", "octobercms", "user", "profile"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.5.9",
+        "composer/installers": "~1.0"
+    },
+    "minimum-stability": "dev"
+}
