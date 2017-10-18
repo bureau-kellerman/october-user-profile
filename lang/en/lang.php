@@ -32,6 +32,10 @@ return [
     'account' => [
         'account' => 'Account (with profile)'
     ],
+    'user_list' => [
+      'name' => 'User List',
+      'desc' => 'Lists users with fields filterable by group'
+    ],
     'menu_user_widget' => [
         'menu_user_widget' => 'Menu User Widget',
         'menu_user_widget_desc' => 'Sign in/out widget',

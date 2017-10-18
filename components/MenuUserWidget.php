@@ -1,4 +1,4 @@
-<?php namespace Esroyo\UserProfile\Components;
+<?php namespace Kellerman\UserProfile\Components;
 
 use RainLab\User\Components\Account as UserAccountComponent;
 use Exception;
@@ -8,8 +8,8 @@ class MenuUserWidget extends UserAccountComponent
     public function componentDetails()
     {
         return [
-            'name'        => 'esroyo.userprofile::lang.menu_user_widget.menu_user_widget',
-            'description' => 'esroyo.userprofile::lang.menu_user_widget.menu_user_widget_desc'
+            'name'        => 'kellerman.userprofile::lang.menu_user_widget.menu_user_widget',
+            'description' => 'kellerman.userprofile::lang.menu_user_widget.menu_user_widget_desc'
         ];
     }
 
@@ -18,14 +18,14 @@ class MenuUserWidget extends UserAccountComponent
         return array_merge(
             parent::defineProperties(), [
             'accountPage' => [
-                'title'       => 'esroyo.userprofile::lang.menu_user_widget.account_page',
-                'description' => 'esroyo.userprofile::lang.menu_user_widget.account_page_desc',
+                'title'       => 'kellerman.userprofile::lang.menu_user_widget.account_page',
+                'description' => 'kellerman.userprofile::lang.menu_user_widget.account_page_desc',
                 'type'        => 'dropdown',
                 'default'     => ''
             ],
             'forgotPasswordPage' => [
-                'title'       => 'esroyo.userprofile::lang.menu_user_widget.forgot_password_page',
-                'description' => 'esroyo.userprofile::lang.menu_user_widget.forgot_password_page_desc',
+                'title'       => 'kellerman.userprofile::lang.menu_user_widget.forgot_password_page',
+                'description' => 'kellerman.userprofile::lang.menu_user_widget.forgot_password_page_desc',
                 'type'        => 'dropdown',
                 'default'     => ''
             ]

@@ -1,8 +1,8 @@
-<?php namespace Esroyo\UserProfile\Components;
+<?php namespace Kellerman\UserProfile\Components;
 
-use Lang;
+use Illuminate\Support\Facades\Lang;
 use RainLab\User\Components\Account as UserAccountComponent;
-use Esroyo\UserProfile\Models\Settings;
+use Kellerman\UserProfile\Models\Settings;
 use Exception;
 
 class Account extends UserAccountComponent
@@ -10,7 +10,7 @@ class Account extends UserAccountComponent
     public function componentDetails()
     {
         return [
-            'name'        => 'esroyo.userprofile::lang.account.account',
+            'name'        => 'kellerman.userprofile::lang.account.account',
             'description' => 'rainlab.user::lang.account.account_desc'
         ];
     }
@@ -35,6 +35,9 @@ class Account extends UserAccountComponent
 
         return parent::onRun();
     }
+    
+    
+
 
     private function getProfileFieldsByIndex($index = 'tab')
     {

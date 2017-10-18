@@ -1,9 +1,11 @@
-<?php namespace Kellerman\UserProfile;
+<?php 
 
-use Yaml;
-use Schema;
-use Lang;
-use File;
+namespace Kellerman\UserProfile;
+
+use October\Rain\Parse\Yaml;
+use October\Rain\Support\Facades\Schema;
+use Illuminate\Support\Facades\Lang;
+use October\Rain\Support\Facades\File;
 use System\Classes\PluginBase;
 use System\Classes\SettingsManager;
 use RainLab\User\Models\User as UserModel;
@@ -33,34 +35,37 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'esroyo.userprofile::lang.plugin.name',
-            'description' => 'esroyo.userprofile::lang.plugin.description',
-            'author'      => 'Kellerman',
-            'icon'        => 'icon-user-plus',
-            'homepage'    => ''
+            'name'        => 'kellerman.userprofile::lang.plugin.name',
+            'description' => 'kellerman .userprofile::lang.plugin.description',
+            'author'      => 'Milan Kubin',
+            'icon'        => 'icon-user-plus',  
+            'homepage'    => 'https://github.com/bureau-kellerma/oc-userprofile-plugin'
         ];
     }
 
     public function registerSettings()
     {
+        
         return [
             'settings' => [
                 'label'       => 'esroyo.userprofile::lang.settings.menu_label',
                 'description' => 'esroyo.userprofile::lang.settings.menu_description',
                 'category'    => SettingsManager::CATEGORY_USERS,
                 'icon'        => 'icon-user-plus',
-                'class'       => 'Kellermano\UserProfile\Models\Settings',
+                'class'       => 'Esroyo\UserProfile\Models\Settings',
                 'order'       => 500,
                 'permissions' => ['rainlab.users.settings']
             ]
         ];
+        
     }
 
     public function registerComponents()
     {
         return [
             'Kellerman\UserProfile\Components\Account'       => 'account',
-            'Kellerman\UserProfile\Components\MenuUserWidget'       => 'menuUserWidget'
+            'Kellerman\UserProfile\Components\MenuUserWidget'       => 'menuUserWidget',
+            'Kellerman\UserProfile\Components\UserList'       => 'userList',
         ];
     }
 
@@ -72,7 +77,7 @@ class Plugin extends PluginBase
     {
         return [
             'functions' => [
-                '_' => function($messageId, $domain = 'esroyo.userprofile::lang.messages') {
+                '_' => function($messageId, $domain = 'kellerman.userprofile::lang.messages') {
                     return Lang::get("$domain.$messageId");
                 }
             ]
