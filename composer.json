@@ -1,5 +1,5 @@
 {
-    "name": "kellerman/october-user-profile",
+    "name": "kellerman/userprofile",
     "type": "october-plugin",
     "description": "User profile plugin for October CMS",
     "homepage": "",

@@ -1,4 +1,4 @@
-<?php namespace Esroyo\UserProfile;
+<?php namespace Kellerman\UserProfile;
 
 use Yaml;
 use Schema;
@@ -8,7 +8,7 @@ use System\Classes\PluginBase;
 use System\Classes\SettingsManager;
 use RainLab\User\Models\User as UserModel;
 use RainLab\User\Controllers\Users as UsersController;
-use Esroyo\UserProfile\Models\Settings;
+use Kellerman\UserProfile\Models\Settings;
 
 /**
  * UserProfile Plugin Information File
@@ -35,9 +35,9 @@ class Plugin extends PluginBase
         return [
             'name'        => 'esroyo.userprofile::lang.plugin.name',
             'description' => 'esroyo.userprofile::lang.plugin.description',
-            'author'      => 'Carles Escrig Royo',
+            'author'      => 'Kellerman',
             'icon'        => 'icon-user-plus',
-            'homepage'    => 'https://github.com/esroyo/oc-userprofile-plugin'
+            'homepage'    => ''
         ];
     }
 
@@ -49,7 +49,7 @@ class Plugin extends PluginBase
                 'description' => 'esroyo.userprofile::lang.settings.menu_description',
                 'category'    => SettingsManager::CATEGORY_USERS,
                 'icon'        => 'icon-user-plus',
-                'class'       => 'Esroyo\UserProfile\Models\Settings',
+                'class'       => 'Kellermano\UserProfile\Models\Settings',
                 'order'       => 500,
                 'permissions' => ['rainlab.users.settings']
             ]
@@ -59,8 +59,8 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Esroyo\UserProfile\Components\Account'       => 'account',
-            'Esroyo\UserProfile\Components\MenuUserWidget'       => 'menuUserWidget'
+            'Kellerman\UserProfile\Components\Account'       => 'account',
+            'Kellerman\UserProfile\Components\MenuUserWidget'       => 'menuUserWidget'
         ];
     }
 
