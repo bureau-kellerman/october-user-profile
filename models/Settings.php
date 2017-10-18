@@ -1,4 +1,4 @@
-<?php namespace Esroyo\UserProfile\Models;
+<?php namespace Kellerman\UserProfile\Models;
 
 use Lang;
 use Model;
