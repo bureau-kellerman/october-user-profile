@@ -48,11 +48,11 @@ class Plugin extends PluginBase
         
         return [
             'settings' => [
-                'label'       => 'esroyo.userprofile::lang.settings.menu_label',
-                'description' => 'esroyo.userprofile::lang.settings.menu_description',
+                'label'       => 'kellerman.userprofile::lang.settings.menu_label',
+                'description' => 'kellerman.userprofile::lang.settings.menu_description',
                 'category'    => SettingsManager::CATEGORY_USERS,
                 'icon'        => 'icon-user-plus',
-                'class'       => 'Esroyo\UserProfile\Models\Settings',
+                'class'       => 'Kellerman\UserProfile\Models\Settings',
                 'order'       => 500,
                 'permissions' => ['rainlab.users.settings']
             ]

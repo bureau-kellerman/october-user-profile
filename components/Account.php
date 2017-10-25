@@ -43,7 +43,7 @@ class Account extends UserAccountComponent
     {
         $profileFields = Settings::get('profile_field');
         $default = $index === 'tab' ?
-            Lang::get('esroyo.userprofile::lang.settings.field_tab_default') : 'undefined';
+            Lang::get('kellerman.userprofile::lang.settings.field_tab_default') : 'undefined';
 
         if (!$profileFields || !array_key_exists($index, reset($profileFields))) {
             return [];
